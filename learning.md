@@ -147,3 +147,13 @@ But this key
 `<li key="li-01">Example1</li>`
 
 So it helps React to match up items before and after a change (changed items, reordering, deleting... all kinda state changes)
+
+---
+
+## Today the weather is good, I didn't sleep well, but let's learn some JavaScript for fun
+
+### Exercise
+
+Built an interactive interface using some basic elements such us JSX in HTML, event listners, conditions in HMTL, root rendering, DOM injection...
+
+It feels different building the app following the instructions that codecademy broke down for me - which enabled me to understand the code line by line, and question my own approaches to improve my own understanding.
