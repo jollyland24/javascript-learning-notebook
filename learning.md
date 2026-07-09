@@ -152,7 +152,7 @@ So it helps React to match up items before and after a change (changed items, re
 
 ## Today the weather is good, I didn't sleep well, but let's learn some JavaScript for fun
 
-### Exercise
+### Exercise & Quiz
 
 Built an interactive interface using some basic elements such us JSX in HTML, event listners, conditions in HMTL, root rendering, DOM injection...
 
