@@ -12,8 +12,12 @@ And I am not happy about it. But let's fucking learn and improve myself
 
 #### () and {}
 
-the parentheses are needed when there is a return, like anytime, anywhere, it needs to be wrapped
+the parentheses are needed when there is a return, like anytime, anywhere, it needs to be wrapped, remember this with "always returnd a single outermost element"
 
 but curly braces, on the other hand, is curly, so,it is more expressive and say 'when you see me, switch back to javascript'
 
 #### components
+
+we can safely go with this cookie-cutter metaphor to describe what a component is.
+
+and what was tricky for me to memorize is that when using it, it should be `<MyComponent />` instead of `{MyComponent}
