@@ -21,3 +21,7 @@ but curly braces, on the other hand, is curly, so,it is more expressive and say 
 we can safely go with this cookie-cutter metaphor to describe what a component is.
 
 and what was tricky for me to memorize is that when using it, it should be `<MyComponent />` instead of `{MyComponent}
+
+### the true magic is when you connect stuff
+
+Today, we are learning how to wrap a dumping into a sprint roll. (it eneded bluntly and that is the only takeaway)
