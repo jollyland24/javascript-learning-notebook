@@ -65,10 +65,6 @@ Every naming conventions I find useful while reading the documentations [^airbnb
   
     Code can be factured into functions, functions can be extrated into helpers, etc. This helps the function to become self-descriptive[^jsinfofacture]
 
--  __(Should be prettier's job but) how's the style?__ 
-    
-    In the [cheat sheet](/media/download.png), you can find the details of syntax rules [^jsinfosyntax]
-
 
 
 
