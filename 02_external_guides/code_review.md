@@ -59,7 +59,7 @@ Every naming conventions I find useful while reading the documentations [^airbnb
 
 -  __Is the code self explanatory enough?__ 
   
-    “If the code is so unclear that it requires a comment, then maybe it should be rewritten instead”. The comments are beneficial when it acts like a tldr and/or a lil flyer of why/how/what to do with the solution, this seems to be a debate between developers if there is 'bad comments', but for now, keep code self-explanatory, and comment only when you have other intentions [^jsinfocomments]
+    “If the code is so unclear that it requires a comment, then maybe it should be rewritten instead”. The comments are beneficial when it acts like a tldr and/or a lil flyer of why/how/what to do with the solution, this seems to be a debate between developers if there is 'bad comments', but for now, keep code self-explanatory, and comment only when you have other intentions [^jsinfocomments], an example of intentional comments, see this [image](media/example.webp).
 
 -  __Are the functions abstracted enough?__ 
   
