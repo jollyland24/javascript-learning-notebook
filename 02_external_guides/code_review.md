@@ -2,8 +2,58 @@
 
 
 #### Validating Functions
+TODO
+
+#### Architecture
+TODO
+
+#### Project Specific
+TODO
+
 
 #### Naming Conventions
+
+Every naming conventions I find useful while reading the documentations [^airbnbnaming] [^alibaba] [^jsinfoninja]
+
+- Avoid sigle letter names
+
+- Use __camelCase__ when naming objects, functions, and instances
+
+- Use __PascalCase__ when naming constructors or classes
+
+- Use __UPPER_SNAKE_CASE__ when naming constants
+
+- Acronyms and initialisms should always be all uppercased, or all lowercased. (eg. `HTTPRequests` instead of `HttpRequests`)
+
+- Don't use uncommon abbreviations, or shortening words to make your own abbreviations, for example, `userAgent` → `ua`
+
+- Don't encode the type in the name. Examples: `obj`, `data`, `value`, `item`... or `nameString`, where `name` does the job perfectly
+
+- If the `interface` name is to indicate the ability of the `interface`, then its name should be an adjective.
+
+- No space is used between the '(' character and its following character. Same for the ')' character and its preceding character.
+
+- There must be one space between keywords, such as if/for/while/switch, and parentheses.
+
+- There must be one space at both left and right side of operators, such as '=', '&&', '+', '-', ternary operator, etc.
+
+- Java code has a column limit of 120 characters. Except import statements, any line that would exceed this limit must be line-wrapped
+
+- There must be one space between a comma and the next parameter for methods with multiple parameters.
+
+- Consider to give function the prefixes that are aligned with the codebase, bad example is, for example, mixing `displayMessage`, `renderCard`, `showText`, which gives you the wrong impression that they are functionally different. And on the other hand, consider to give functions that are indeed different less similar names.
+
+- Name things by what they are, not by how they compare to something else. Avoid relative names like "mega", "new", "super".
+
+- Do not use same names for variables inside and outside a function.
+
+- Be precise on the naming based on what effects the function have, for example, `isReady()` should only carry out calculation, find and return the data, without creating "side-effetcs"
+
+- Also, do not make your functions do anything that is not said in the name
+
+- Name booleans with a predicate prefix: `isVisible`, — not `visible`.
+
+- Prefer positive boolean names: `isValid` over `isNotValid` (so you never read `!isNotValid`)
 
 #### Comments and Styles
 
@@ -21,12 +71,6 @@
 
 
 
-
-#### Architecture
-
-
-
-#### Project Specific
 
 ### Agentic 
 
@@ -54,7 +98,11 @@ whereas AI would:
 
 [^jsinfosyntax]: https://javascript.info/coding-style#syntax
 
+[^jsinfoninja]: https://javascript.info/ninja-code
+
 [^airbnb]: https://github.com/airbnb/javascript
+
+[^airbnbnaming]: https://github.com/airbnb/javascript#naming-conventions
 
 [^opencodereview]: https://github.com/alibaba/open-code-review
 
