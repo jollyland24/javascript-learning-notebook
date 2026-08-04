@@ -1,16 +1,5 @@
 ### Review Checklist
-
-
-#### Validating Functions
-TODO
-
-#### Architecture
-TODO
-
-#### Project Specific
-TODO
-
-
+ 
 #### Naming Conventions
 
 Every naming conventions I find useful while reading the documentations [^airbnbnaming] [^alibaba] [^jsinfoninja]
