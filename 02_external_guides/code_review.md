@@ -1,16 +1,18 @@
-### Review Checklist
- 
-#### Naming Conventions
+### Purpose - Does the code do what it's supposed to do?
+
+### Readability - Is the code easy to understand?
+
+#### Naming
 
 Every naming conventions I find useful while reading the documentations [^airbnbnaming] [^alibaba] [^jsinfoninja]
 
 - Avoid sigle letter names
 
-- Use __camelCase__ when naming objects, functions, and instances
+- Use **camelCase** when naming objects, functions, and instances
 
-- Use __PascalCase__ when naming constructors or classes
+- Use **PascalCase** when naming constructors or classes
 
-- Use __UPPER_SNAKE_CASE__ when naming constants
+- Use **UPPER_SNAKE_CASE** when naming constants
 
 - Acronyms and initialisms should always be all uppercased, or all lowercased. (eg. `HTTPRequests` instead of `HttpRequests`)
 
@@ -46,18 +48,17 @@ Every naming conventions I find useful while reading the documentations [^airbnb
 
 #### Comments and Styles
 
--  __Is the code self explanatory enough?__ 
-  
-    “If the code is so unclear that it requires a comment, then maybe it should be rewritten instead”. The comments are beneficial when it acts like a tldr and/or a lil flyer of why/how/what to do with the solution, this seems to be a debate between developers if there is 'bad comments', but for now, keep code self-explanatory, and comment only when you have other intentions [^jsinfocomments], an example of intentional comments, see this [image](media/example.webp).
+- **Is the code self explanatory enough?**
 
--  __Are the functions abstracted enough?__ 
-  
-    Code can be factured into functions, functions can be extrated into helpers, etc. This helps the function to become self-descriptive[^jsinfofacture]
+  “If the code is so unclear that it requires a comment, then maybe it should be rewritten instead”. The comments are beneficial when it acts like a tldr and/or a lil flyer of why/how/what to do with the solution, this seems to be a debate between developers if there is 'bad comments', but for now, keep code self-explanatory, and comment only when you have other intentions [^jsinfocomments], an example of intentional comments, see this [image](media/example.webp).
 
+- **Are the functions abstracted enough?**
 
+  Code can be factured into functions, functions can be extrated into helpers, etc. This helps the function to become self-descriptive[^jsinfofacture]
 
+### Performance - Does the code run efficiently?
 
-### Agentic 
+### Agentic
 
 Recommended by OpenAI [^openai], human devs and AI can run reviews in parallel, where the human devs focus on:
 
@@ -70,8 +71,6 @@ whereas AI would:
 
 - run initial coding review, for one or more times
 - execute parts of the code and interpret runtime behvaior, trace logics across files and services
-
-
 
 ### References
 
@@ -94,4 +93,3 @@ whereas AI would:
 [^alibaba]: https://github.com/alibaba/Alibaba-Java-Coding-Guidelines
 
 [^openaiinterview]: https://x.com/wquguru/status/2083943877187432904
-
