@@ -1,14 +1,14 @@
-#### State managment
+### State managment
 
 zustand
 - https://zustand.docs.pmnd.rs/learn/getting-started/introduction
 
 
-#### Data
+### Data
 - https://dagster.io/
 
 
-#### Front End
+### Front End
 
 Two connected tools - fiber and drei
 - https://drei.docs.pmnd.rs/abstractions/ascii-renderer
@@ -30,7 +30,7 @@ Accessibility
 - https://www.a11yproject.com/
 
 
-#### C°F Internal
+### C°F Internal
 - https://cleverfranke.atlassian.net/wiki/spaces/TEC/pages/4048912415/Frontend
 - https://cleverfranke.atlassian.net/wiki/spaces/TEC/pages/4047699983/Our+tech+standards
 - https://cleverfranke.atlassian.net/wiki/spaces/TPC/pages/3773923341/Accessibility
