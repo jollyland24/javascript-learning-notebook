@@ -1,5 +1,11 @@
 ### Purpose - Does the code do what it's supposed to do?
 
+#### Functionality 
+- Does the function actually covers the full design intents?
+
+#### System dependency 
+TODO: define "Use design systems properly"
+
 ### Readability - Is the code easy to understand?
 
 #### Naming
