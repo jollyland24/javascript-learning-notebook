@@ -4,11 +4,27 @@
 
 #### 1. Why are there several nodes highligted everytime I land
 
+So the components are in `apps/client/src/components/Timeline`, one of which is what makes the nodes get highlighted
+
+[?] So the takeaway is to always look into the components as well when reading the docs? There is also a `TimeFilter` what does it have to do with Timeline?
+
+[?] What is the difference between tracking the hex with GSAP and with react state?
+
+[?] Where is this docuemnted? Any decisions made beyond the code implementation? (I could imagine that the nodes selection worths stakeholder discussions)
+
 #### 2: How do we map the nodes to the different shapes of Hexs
+
+This is the three.js part, where you construct all sort of knobs you can tweak in this file `apps/client/src/components/Visualization/three/hexagons/Hexagons.ts`
 
 #### 3: How do we align the nodes in the axises?
 
+The `apps/client/src/views/TimelineView.tsx` defines `timeScale` as single source of truth
+
+["single source of truth" like these kind of comments is just so helpful!]
+
 #### 4: How does it manage to show the connectors on hover?
+
+[?] six hops is just... shows that it would be valuable to document it?
 
 #### 5: Why does the mobile use different mechanisms for scaling, and what exactly is it using?
 
