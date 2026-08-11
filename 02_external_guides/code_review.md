@@ -4,7 +4,10 @@
 - Does the function actually covers the full design intents?
 
 #### System dependency 
-TODO: define "Use design systems properly"
+- Use design systems properly?
+
+#### Testing 
+- All tests exist?
 
 ### Readability - Is the code easy to understand?
 
