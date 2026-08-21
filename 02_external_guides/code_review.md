@@ -81,6 +81,10 @@ whereas AI would:
 - run initial coding review, for one or more times
 - execute parts of the code and interpret runtime behvaior, trace logics across files and services
 
+### Project Specific
+
+Boeing has relevant front end code conventions documented too [^boe1] [^boe2] [^boe3]
+
 ### References
 
 [^openai]: https://cdn.openai.com/business-guides-and-resources/building-an-ai-native-engineering-team.pdf
@@ -102,3 +106,9 @@ whereas AI would:
 [^alibaba]: https://github.com/alibaba/Alibaba-Java-Coding-Guidelines
 
 [^openaiinterview]: https://x.com/wquguru/status/2083943877187432904
+
+[^boe1]: https://github.com/cleverfranke/boeing-kg#component-file-structure-and-naming
+
+[^boe2]: https://github.com/cleverfranke/boeing-kg#naming-and-organizational-conventions
+
+[^boe3]: https://github.com/cleverfranke/boeing-kg#component-definitions-and-export
