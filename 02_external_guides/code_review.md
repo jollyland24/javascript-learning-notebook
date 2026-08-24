@@ -1,17 +1,19 @@
-### Purpose - Does the code do what it's supposed to do?
+## General Guideline
 
-#### Functionality 
+### A. Purpose - Does the code do what it's supposed to do?
+
+#### A1. Functionality 
 - Does the function actually covers the full design intents?
 
-#### System dependency 
+#### A2. System dependency 
 - Use design systems properly?
 
-#### Testing 
+#### A3. Testing 
 - All tests exist?
 
-### Readability - Is the code easy to understand?
+### B. Readability - Is the code easy to understand?
 
-#### Naming
+#### B1. Naming
 
 Every naming conventions I find useful while reading the documentations [^airbnbnaming] [^alibaba] [^jsinfoninja]
 
@@ -55,7 +57,7 @@ Every naming conventions I find useful while reading the documentations [^airbnb
 
 - Prefer positive boolean names: `isValid` over `isNotValid` (so you never read `!isNotValid`)
 
-#### Comments and Styles
+#### B2. Comments and Styles
 
 - **Is the code self explanatory enough?**
 
@@ -65,9 +67,11 @@ Every naming conventions I find useful while reading the documentations [^airbnb
 
   Code can be factured into functions, functions can be extrated into helpers, etc. This helps the function to become self-descriptive[^jsinfofacture]
 
-### Performance - Does the code run efficiently?
+### C. Performance - Does the code run efficiently?
 
-### Agentic
+## Situational Guideline
+
+### D. Code Review for Agents
 
 Recommended by OpenAI [^openai], human devs and AI can run reviews in parallel, where the human devs focus on:
 
@@ -81,9 +85,22 @@ whereas AI would:
 - run initial coding review, for one or more times
 - execute parts of the code and interpret runtime behvaior, trace logics across files and services
 
-### Project Specific
+
+### E. Code Review for Humans
+How to survive this event of a high chance in miscommunication? [^blog]
+
+- It's a no no: 
+  - "You blah blah"
+  - "A could be better done this way"
+  - "I think B is wrong, should be C"
+- Do not assume you are definately right, first seek total understanding. Ask questions, rule of thumb is more questions than suggestions
+- When you see an edge case that the code fails on, offer useful pointers on code, as well as contextual, historical info that the author might not be aware of
+- EXPRESS excitement, gratitude, compliments
+
+### F. Code Review for Projects
 
 Boeing has relevant front end code conventions documented too [^boe1] [^boe2] [^boe3]
+
 
 ### References
 
@@ -112,3 +129,5 @@ Boeing has relevant front end code conventions documented too [^boe1] [^boe2] [^
 [^boe2]: https://github.com/cleverfranke/boeing-kg#naming-and-organizational-conventions
 
 [^boe3]: https://github.com/cleverfranke/boeing-kg#component-definitions-and-export
+
+[^blog]: https://dev.to/tan/effective-comments-on-pull-requests-g46
