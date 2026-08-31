@@ -1,48 +1,97 @@
-I hit this concept while improving my code. 
-What I understand is that hoist means you extract the constants to the top (top in scope, don't know if that means in parent or just top of file), and it is not a blocker of anything, but a pattern of preference
+# Hoisting
 
+I hit this concept while improving my code. Below is what I thought at each
+step, and what was actually true.
 
-and in many cases, where we have `const` instead of `var` we can do the hoisting but if we call on top, it will throw an error
+## What I assumed at first (wrong)
 
-In the coding question, one exercise is 
+I thought hoisting meant that you move constants to the top of a scope by hand.
+I thought it was a style preference and that it blocked nothing.
 
-```jsx
+**What is actually true.** That is a different idea with the same name. "Hoist a
+value out of a loop" and "hoist state up" in React are refactors that a person
+does. JavaScript hoisting is not a refactor. The engine does it, and you cannot
+turn it off.
+
+The engine reads each scope in two passes.
+
+1. Pass one registers every declaration in that scope.
+2. Pass two runs the statements from top to bottom.
+
+Hoisting is the name for the result of pass one.
+
+## My open question: does "top" mean the parent or the file?
+
+Neither. It means the top of the enclosing scope. Each scope hoists its own
+declarations. For `var` and for function declarations, that scope is the
+enclosing function. For `let`, `const`, and `class`, it is the enclosing block.
+
+## What I assumed about `const` and `var` (right idea, wrong wording)
+
+I wrote that with `const` instead of `var` "we can do the hoisting but if we
+call on top, it will throw an error".
+
+**What is actually true.** `let` and `const` are hoisted, so that part was
+right. But the reason for the error is not that hoisting failed. Pass one
+registers the name either way. The kinds differ in whether the name holds a
+usable value.
+
+| Declaration | Name exists after pass one | Value after pass one |
+|---|---|---|
+| `var x = 1` | yes | `undefined` |
+| `function f() {}` | yes | the complete function, body included |
+| `let x` / `const x` | yes | none — a read throws `ReferenceError` |
+
+For `let` and `const`, the name is reserved from the start of the scope and
+stays unreadable until the declaration line runs. That gap is the temporal dead
+zone. The error is `ReferenceError: Cannot access 'x' before initialization`,
+which is not the same as "'x' is not defined". The name exists. It is not ready.
+
+## Exercise 1: clickClack
+
+The task: fill in the return statements so that `clickClack()` returns `"Moo!"`
+when it is called. Put any other string in the other return statement.
+
+```js
 function clickClack() {
-    return // your code here
+    return console.log("Moo!");
 }
- 
+
 clickClack = function() {
-    return // your code here
+    return console.log("any");
 };
- 
+
 clickClack();
 ```
-where I needed to "Fill in the return statements so clickClack() returns "Moo!" when it is called. Add any other string to the other return statement."
 
-so what I understand is this exercise wanted me to grab a sense of how code runs top to bottom, so 
+**What I thought.** The exercise was about code running from top to bottom.
 
-```jsx
-function clickClack() {
-    return console.log("Moo!");// your code here
-}
- 
-clickClack = function() {
-    return console.log("any");// your code here
-};
- 
-clickClack();
-```
-I did this and it gave me "any" in terminal, which means the `clickClack` was re-assigned?
+**What happened.** The terminal printed `"any"`.
 
-I failed to connect this to the concept of hoisting
+**What I got right.** `clickClack` was reassigned. The assignment on line 5 runs
+before the call on line 9, so the second function is the one that runs.
 
-last coding question was
+**What was wrong.** `return console.log("Moo!")` prints `"Moo!"` and returns
+`undefined`, because `console.log` returns `undefined`. The task asked for a
+return value, so the correct line is `return "Moo!";`.
 
-```jsx
+**The connection to hoisting I could not make.** Line 5 is `clickClack = ...`,
+not `let clickClack = ...`. It is a plain assignment, and an assignment needs a
+name that already exists. That name came from pass one, from the declaration on
+line 1.
+
+So the exercise is not only about top-to-bottom order. It separates the two
+things that a function declaration does at once: pass one **creates the name**,
+pass two **fills in the value**. Reassignment proves they are separate steps,
+because the second step can happen twice.
+
+## Exercise 2: foo
+
+```js
 foo();
- 
+
 let foo = function() {
-console.log("I love Codecademy!");
+    console.log("I love Codecademy!");
 };
 
 function foo() {
@@ -50,6 +99,20 @@ function foo() {
 }
 ```
 
-So I guess this is also to teach something about the top to bottom coding running order, but also revisit some ideas, such as 
-a. initialization, here it is not initialized before calling, but 
-b. another bigger issue exists because you can't re-declare a `let` function
+**What I thought.**
+
+a. `foo` is not initialized before it is called.
+b. The bigger issue is that you cannot redeclare a `let` function.
+
+**What I got right.** Point b is the answer, and it is the only issue. A
+function declaration at the top level is `var` scoped. A `let` name and a `var`
+name cannot share one scope. Node rejects the file:
+
+```
+SyntaxError: Identifier 'foo' has already been declared
+```
+
+**What was wrong.** Point a never applies. A `SyntaxError` happens when the
+engine parses the file, which is before pass one and before pass two. No
+statement runs. Neither message prints, and no temporal dead zone error appears.
+Initialization order cannot be the problem in a file that never runs.
