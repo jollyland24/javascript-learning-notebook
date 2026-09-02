@@ -67,6 +67,10 @@ Every naming conventions I find useful while reading the documentations [^airbnb
 
   Code can be factured into functions, functions can be extrated into helpers, etc. This helps the function to become self-descriptive[^jsinfofacture]
 
+- **Is the same source read more than once?**
+
+  Repeated reads from one source (a store, a context, a props object, the DOM) are a structural smell, not a performance one. Collapse them into a single grouped read and destructure what you need, so the reader sees one dependency instead of counting several. The caveat is that a grouped read usually returns a fresh object every time, which breaks any consumer comparing by reference, so check how the source compares before grouping[^zustandequality]
+
 ### C. Performance - Does the code run efficiently?
 
 ## Situational Guideline
@@ -109,6 +113,8 @@ Boeing has relevant front end code conventions documented too [^boe1] [^boe2] [^
 [^jsinfocomments]: https://javascript.info/comments#bad-comments
 
 [^jsinfofacture]: https://javascript.info/comments#recipe-factor-out-functions
+
+[^zustandequality]: https://zustand.docs.pmnd.rs/apis/create-with-equality-fn
 
 [^jsinfosyntax]: https://javascript.info/coding-style#syntax
 
